@@ -1,0 +1,31 @@
+<div class="card">
+  <!-- TASK 1 -->
+  <!-- Dynamically add two numbers -->
+  <!-- HINT: Create/Use variables -->
+  <div>{{ num1 }} + {{ num2 }} = {{ num1 + num2 }}</div>
+
+  <!-- TASK 2 -->
+  <!-- Create two inputs to change the num1 and num2 -->
+  <!-- HINT: <input [(ngModel)]="myVariable" />-->
+  <div>
+    <input [(ngModel)]="num1" />
+    <input [(ngModel)]="num2" />
+  </div>
+
+  <!-- TASK 3 -->
+  <!-- Display all people from 'people' array using '*ngFor' -->
+  <ul>
+    <li *ngFor="let person of people">{{ person }}</li>
+  </ul>
+
+  <!-- TASK 4 -->
+  <!-- Create an input and a button to add more people to the array -->
+  <!-- HINT: '<button (click)="doSomething()">...</button>' to trigger on click -->
+  <div>
+    <input #inputName />
+    <button (click)="people.push(inputName.value)">Add</button>
+  </div>
+
+  <!-- TASK 5 -->
+  <app-say [text]="'hello!'"></app-say>
+</div>

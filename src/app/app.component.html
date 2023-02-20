@@ -1,0 +1,24 @@
+<div class="container" [class.gradient]="cache.animations">
+  <div [class.fade]="cache.animations">
+    <animated-text [formattedText]="title"></animated-text>
+    <p>
+      This is an example page with some <b class="yellow">tasks</b> to
+      <b class="green">complete</b> for yourself. Feel free to ask me
+      <b class="purple">anything</b> if you need help!<br />
+      You'll find the tasks inside
+      <span class="cyan">"/app/task/task.component.html"</span>.
+    </p>
+
+    <span class="divider"></span>
+
+    <section>
+      <h2>Tasks</h2>
+      <app-task></app-task>
+    </section>
+
+    <footer class="footer">
+      <label for="toggle">Disable animations</label>
+      <input id="toggle" type="checkbox" [(ngModel)]="cache.animations" />
+    </footer>
+  </div>
+</div>

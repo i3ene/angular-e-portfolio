@@ -1,0 +1,16 @@
+svg {
+  vertical-align: bottom;
+  margin-bottom: 7px;
+  overflow: visible;
+}
+
+.line {
+  stroke-dasharray: 0 300;
+  animation: 5s lineMove 0.4s ease alternate infinite;
+}
+
+@keyframes lineMove {
+  60%, 100% {
+    stroke-dasharray: 200 0;
+  }
+}

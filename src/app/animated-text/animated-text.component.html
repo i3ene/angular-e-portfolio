@@ -1,0 +1,17 @@
+<h1>
+  <ng-container *ngFor="let content of formattedText">
+    <ng-container *ngFor="let letter of content.text.split('')">
+      <ng-container *ngIf="letters.get(letter); else normal">
+        <letter
+          [animations]="cache.animations"
+          [options]="letters.get(letter)"
+          [color]="getColor(content.color)"
+        ></letter>
+      </ng-container>
+      <ng-template #normal>
+        <b [class]="content.color">{{ letter }}</b>
+        <wbr *ngIf="letter == ' '" />
+      </ng-template>
+    </ng-container>
+  </ng-container>
+</h1>
