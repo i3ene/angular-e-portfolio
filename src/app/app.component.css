@@ -1,11 +1,11 @@
 .container {
   padding: 0px 8px;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0px;
   right: 0px;
-  overflow: visible !important;
+  overflow-y: auto !important;
 }
 
 .gradient {
